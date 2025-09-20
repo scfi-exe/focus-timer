@@ -38,3 +38,18 @@ function reset() {
 }
 
 // setInterval(upSec, 1000);
+
+// Toggle menu visibility
+document.getElementById("bg-switcher").addEventListener("click", () => {
+  const menu = document.getElementById("bg-menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
+
+// Change background video
+function setBackground(file) {
+  const video = document.getElementById("bg-video");
+  const source = video.querySelector("source");
+  source.src = file;
+  video.load(); // reload video with new source
+  video.play(); // keep it looping
+}
