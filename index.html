@@ -6,25 +6,23 @@
   </head>
 
   <body>
+    <video autoplay muted loop id="bg-video">
+      <source src="backgrounds/rainyCabin.mp4" type="video/mp4" />
+    </video>
     <div class="top-right">
       <!-- <h1>This is a heading</h1> -->
       <div class="stopwatch-box">
         <h1 id="Timer">00:00</h1>
         <!-- below are the buttons that control the timer -->
         <div class="clock-buttons">
-          <button
-            type="button"
-            class="btn"
-            id="Start"
-            onclick="if(running===null){countUp = setInterval(upSec, 1000)};"
-          >
+          <button type="button" class="btn" id="Start" onclick="startUp()">
             Start
           </button>
           <button
             type="button"
             class="btn"
             id="Stop"
-            onclick="clearInterval(countUp);running=null;"
+            onclick="clearInterval(running);running=null;"
           >
             Stop
           </button>
