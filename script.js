@@ -20,7 +20,11 @@ function upSec() {
 function reset() {
   sec = 0;
   min = 0;
-  //   clearInterval(countUp);
+  // stop the interval if it's running
+  clearInterval(countUp);
+
+  // reset display too
+  document.getElementById("Timer").innerText = "00:00";
 }
 
 // setInterval(upSec, 1000);
