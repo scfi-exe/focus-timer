@@ -16,7 +16,7 @@
             type="button"
             class="btn"
             id="Start"
-            onclick="countUp = setInterval(upSec, 1000);"
+            onclick="if(running===null){countUp = setInterval(upSec, 1000)};"
           >
             Start
           </button>
@@ -24,7 +24,7 @@
             type="button"
             class="btn"
             id="Stop"
-            onclick="clearInterval(countUp)"
+            onclick="clearInterval(countUp);running=null;"
           >
             Stop
           </button>

@@ -2,6 +2,7 @@ console.log("JS Linked!");
 
 let sec = 0;
 let min = 0;
+let running = null;
 
 function upSec() {
   sec += 1;
@@ -22,6 +23,7 @@ function reset() {
   min = 0;
   // stop the interval if it's running
   clearInterval(countUp);
+  running = null;
 
   // reset display too
   document.getElementById("Timer").innerText = "00:00";
