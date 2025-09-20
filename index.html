@@ -8,9 +8,26 @@
   <body>
     <h1>This is a heading</h1>
     <p id="Timer">00:00</p>
-    <button type="button" class="button">Start</button>
-    <button type="button" class="button">Stop</button>
-    <button type="button" class="button">Reset</button>
+    <!-- below are the buttons that control the timer -->
+    <button
+      type="button"
+      class="button"
+      id="Start"
+      onclick="countUp = setInterval(upSec, 1000);"
+    >
+      Start
+    </button>
+    <button
+      type="button"
+      class="button"
+      id="Stop"
+      onclick="clearInterval(countUp)"
+    >
+      Stop
+    </button>
+    <button type="button" class="button" id="Reset" onclick="reset()">
+      Reset
+    </button>
     <script src="script.js"></script>
   </body>
 </html>

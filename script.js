@@ -17,4 +17,10 @@ function upSec() {
   document.getElementById("Timer").innerText = `${displayMin}:${displaySec}`;
 }
 
-setInterval(upSec, 1000);
+function reset() {
+  sec = 0;
+  min = 0;
+  //   clearInterval(countUp);
+}
+
+// setInterval(upSec, 1000);
